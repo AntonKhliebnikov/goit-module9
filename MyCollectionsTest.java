@@ -1,24 +1,28 @@
 package module9;
 
+import java.util.Stack;
+
 public class MyCollectionsTest {
     public static void main(String[] args) {
-        MyQueue<Integer> queue = new MyQueue<>();
-        queue.add(56);
-        queue.add(999);
-        queue.add(94);
-        queue.add(36);
-        queue.add(41);
-        queue.print();
-        System.out.println("queue.size() = " + queue.size());
-        queue.remove(4);
-        queue.print();
-        System.out.println("queue.peek() = " + queue.peek());
-        queue.print();
-        System.out.println("queue.poll() = " + queue.poll());
-        queue.print();
-        System.out.println("queue.poll() = " + queue.poll());
-        queue.print();
-        queue.clear();
-        queue.print();
+        MyStack<Integer> stack = new MyStack<>();
+        stack.push(54);
+        stack.push(9);
+        stack.push(674);
+        stack.push(111);
+        stack.push(19);
+        stack.print();
+
+        System.out.println("stack.size() = " + stack.size());
+
+        System.out.println("stack.peek() = " + stack.peek());
+        System.out.println("stack.pop() = " + stack.pop());
+        stack.print();
+        System.out.println("stack.size() = " + stack.size());
+
+        stack.print();
+        System.out.println("stack.size() = " + stack.size());
+
+        stack.pop();
+        stack.print();
     }
 }

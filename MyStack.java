@@ -2,12 +2,12 @@ package module9;
 
 import java.util.Objects;
 
-public class MyQueue<T> {
+public class MyStack<T> {
     private int size;
     private Node<T> first;
     private Node<T> last;
 
-    public MyQueue() {
+    public MyStack() {
         first = null;
         last = null;
     }
@@ -33,7 +33,7 @@ public class MyQueue<T> {
         return size;
     }
 
-    public void add(T element) {
+    public void push(T element) {
         Node<T> newNode = new Node<>(element);
         if (first == null) {
             first = last = newNode;
@@ -69,15 +69,15 @@ public class MyQueue<T> {
         size--;
     }
 
-    public T poll() {
-        Node<T> pollNode = first;
-        first = first.next;
+    public T pop() {
+        Node<T> popNode = last;
+        last.prev.next = null;
         size--;
-        return (T) pollNode;
+        return (T) popNode;
     }
 
     public T peek() {
-        return (T) first;
+        return (T) last;
     }
 
     public void print() {
