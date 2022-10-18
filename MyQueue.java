@@ -2,12 +2,12 @@ package module9;
 
 import java.util.Objects;
 
-public class MyLinkedList<T> {
+public class MyQueue<T> {
     private int size;
     private Node<T> first;
     private Node<T> last;
 
-    public MyLinkedList() {
+    public MyQueue() {
         first = null;
         last = null;
     }
@@ -51,16 +51,6 @@ public class MyLinkedList<T> {
         size = 0;
     }
 
-    @SuppressWarnings("unchecked")
-    public T get(int index) {
-        Objects.checkIndex(index, size);
-        Node<T> currentNode = first;
-        for (int i = 0; i < index; i++) {
-            currentNode = currentNode.next;
-        }
-        return (T) currentNode;
-    }
-
     public void remove(int index) {
         Objects.checkIndex(index, size);
         Node<T> currentNode = first;
@@ -77,6 +67,16 @@ public class MyLinkedList<T> {
         }
         currentNode.prev.next = currentNode.next;
         size--;
+    }
+
+    public T poll() {
+        Node<T> pollNode = first;
+        first = first.next;
+        return (T) pollNode;
+    }
+
+    public T peek() {
+        return (T) first;
     }
 
     public void print() {
