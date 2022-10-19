@@ -72,6 +72,7 @@ public class MyStack<T> {
     public T pop() {
         Node<T> popNode = last;
         last.prev.next = null;
+        last = last.prev;
         size--;
         return (T) popNode;
     }

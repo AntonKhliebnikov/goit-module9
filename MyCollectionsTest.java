@@ -24,5 +24,14 @@ public class MyCollectionsTest {
 
         stack.pop();
         stack.print();
+        System.out.println("stack.size() = " + stack.size());
+
+        stack.pop();
+        stack.print();
+        System.out.println("stack.size() = " + stack.size());
+
+        stack.pop();
+        stack.print();
+        System.out.println("stack.size() = " + stack.size());
     }
 }
