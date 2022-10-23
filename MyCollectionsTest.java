@@ -1,37 +1,37 @@
 package module9;
 
-import java.util.Stack;
-
 public class MyCollectionsTest {
     public static void main(String[] args) {
-        MyStack<Integer> stack = new MyStack<>();
-        stack.push(54);
-        stack.push(9);
-        stack.push(674);
-        stack.push(111);
-        stack.push(19);
-        stack.print();
+        MyHashMap<String, Integer> hashMap = new MyHashMap<>();
 
-        System.out.println("stack.size() = " + stack.size());
+        hashMap.put("Anton", 36);
+        hashMap.put("Polina", 38);
+        hashMap.put("Kris", 26);
+        hashMap.put("Tanya", 45);
 
-        System.out.println("stack.peek() = " + stack.peek());
-        System.out.println("stack.pop() = " + stack.pop());
-        stack.print();
-        System.out.println("stack.size() = " + stack.size());
+        hashMap.print();
+        System.out.println("hashMap.size() = " + hashMap.size());
 
-        stack.print();
-        System.out.println("stack.size() = " + stack.size());
+        hashMap.remove("Anton");
 
-        stack.pop();
-        stack.print();
-        System.out.println("stack.size() = " + stack.size());
+        hashMap.print();
+        System.out.println("hashMap.size() = " + hashMap.size());
 
-        stack.pop();
-        stack.print();
-        System.out.println("stack.size() = " + stack.size());
+        hashMap.put("Toha", 33);
 
-        stack.pop();
-        stack.print();
-        System.out.println("stack.size() = " + stack.size());
+        hashMap.print();
+        System.out.println("hashMap.size() = " + hashMap.size());
+
+        hashMap.remove("Tanya");
+        hashMap.remove("Toha");
+        hashMap.remove("Polina");
+        hashMap.remove("Kris");
+
+
+        hashMap.print();
+        System.out.println("hashMap.size() = " + hashMap.size());
+
+
+
     }
 }
