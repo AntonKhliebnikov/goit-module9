@@ -69,16 +69,16 @@ public class MyStack<T> {
         size--;
     }
 
-    public T pop() {
+    public Node<T> pop() {
         Node<T> popNode = last;
         last.prev.next = null;
         last = last.prev;
         size--;
-        return (T) popNode;
+        return popNode;
     }
 
-    public T peek() {
-        return (T) last;
+    public Node<T> peek() {
+        return last;
     }
 
     public void print() {
