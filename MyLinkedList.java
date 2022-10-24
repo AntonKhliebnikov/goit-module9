@@ -51,14 +51,13 @@ public class MyLinkedList<T> {
         size = 0;
     }
 
-    @SuppressWarnings("unchecked")
-    public T get(int index) {
+    public Node<T> get(int index) {
         Objects.checkIndex(index, size);
         Node<T> currentNode = first;
         for (int i = 0; i < index; i++) {
             currentNode = currentNode.next;
         }
-        return (T) currentNode;
+        return currentNode;
     }
 
     public void remove(int index) {

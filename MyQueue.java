@@ -69,15 +69,15 @@ public class MyQueue<T> {
         size--;
     }
 
-    public T poll() {
+    public Node<T> poll() {
         Node<T> pollNode = first;
         first = first.next;
         size--;
-        return (T) pollNode;
+        return pollNode;
     }
 
-    public T peek() {
-        return (T) first;
+    public Node<T> peek() {
+        return first;
     }
 
     public void print() {

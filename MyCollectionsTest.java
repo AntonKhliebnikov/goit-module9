@@ -3,29 +3,15 @@ package module9;
 public class MyCollectionsTest {
     public static void main(String[] args) {
 
-        MyArrayList<Integer> list = new MyArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
-        list.add(6);
-        list.add(7);
-        list.add(8);
-        list.add(9);
-        list.add(10);
-        System.out.println("list = " + list);
-        System.out.println("list.remove(4) = " + list.remove(4));
-        System.out.println("list = " + list);
-        list.clear();
-
-
-
-        System.out.println("list = " + list);
-
-
-
-
-
+        MyLinkedList<String> linkedList = new MyLinkedList<>();
+        linkedList.add("next0");
+        linkedList.add("next1");
+        linkedList.add("next2");
+        linkedList.add("next3");
+        System.out.println("linkedList.size() = " + linkedList.size());
+        linkedList.remove(2);
+        System.out.println("linkedList.size() = " + linkedList.size());
+        linkedList.print();
+        System.out.println("linkedList.get(0) = " + linkedList.get(0));
     }
 }
