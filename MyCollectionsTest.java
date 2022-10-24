@@ -2,34 +2,28 @@ package module9;
 
 public class MyCollectionsTest {
     public static void main(String[] args) {
-        MyHashMap<String, Integer> hashMap = new MyHashMap<>();
 
-        hashMap.put("Anton", 36);
-        hashMap.put("Polina", 38);
-        hashMap.put("Kris", 26);
-        hashMap.put("Tanya", 45);
-
-        hashMap.print();
-        System.out.println("hashMap.size() = " + hashMap.size());
-
-        hashMap.remove("Anton");
-
-        hashMap.print();
-        System.out.println("hashMap.size() = " + hashMap.size());
-
-        hashMap.put("Toha", 33);
-
-        hashMap.print();
-        System.out.println("hashMap.size() = " + hashMap.size());
-
-        hashMap.remove("Tanya");
-        hashMap.remove("Toha");
-        hashMap.remove("Polina");
-        hashMap.remove("Kris");
+        MyArrayList<Integer> list = new MyArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(6);
+        list.add(7);
+        list.add(8);
+        list.add(9);
+        list.add(10);
+        System.out.println("list = " + list);
+        System.out.println("list.remove(4) = " + list.remove(4));
+        System.out.println("list = " + list);
+        list.clear();
 
 
-        hashMap.print();
-        System.out.println("hashMap.size() = " + hashMap.size());
+
+        System.out.println("list = " + list);
+
+
 
 
 

@@ -46,6 +46,7 @@ public class MyArrayList<T> {
     public T remove(int index) {
         Objects.checkIndex(index, size);
         T removedElement = (T) elements[index];
+        resizeIfNeeded();
         System.arraycopy(elements, index + 1, elements, index, size - 1);
         size--;
         return removedElement;
