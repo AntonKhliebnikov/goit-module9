@@ -60,7 +60,7 @@ public class MyHashMap<K, V> {
     public int size() {
         return size;
     }
-    
+
     public void put(K key, V value) {
         Node<K, V> newNode = new Node<>(key, value);
         Node<K, V> currentNode;
